@@ -57,6 +57,18 @@ app.get("/shipping-cost", (req, res)=>{
     res.send(loyaltyPoints.toString());
     });
 
+        app.get('/greet', (req, res) => {
+          const name = req.query.name; 
+          res.send('Hello, '+name+'!');
+        });
+    
+        app.get('/rectangle-area', (req, res) => {
+          const length = req.query.length;
+          const width = req.query.width;
+          const area = length * width;
+          res.send("The area of the rectangle is "+area);
+        });
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
