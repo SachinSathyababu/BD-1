@@ -69,6 +69,11 @@ app.get("/shipping-cost", (req, res)=>{
           res.send("The area of the rectangle is "+area);
         });
 
+        app.get('/product/:id', (req, res) => {
+          const productId = req.params.id;
+          res.send(`Product ID: ${productId}`);
+        });
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
